@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>Fer un programa que demani dos números i un operador. Al final, el programa imprimeix per pantalla el resultat de fer l’operació que contingui la variable operador.</h3>
+<body>
+
+    <p id="Resposta"></p>
+
+    <script>
+    
+    let num1 = parseInt(prompt("Número 1"));
+    let num2 = parseInt(prompt("Número 2"));
+    let operacio = prompt("Operació");
+    let resultat;
+
+    switch(operacio){
+        case "+":
+            resultat = num1 + num2;
+        break;
+        case "-":
+            resultat = num1 - num2;
+        break;
+        case "*":
+            resultat = num1 * num2;
+        break;
+        case "/":
+            resultat = num1 / num2;
+        break;
+        default: "Operació incorrecta";
+
+        
+
+    }
+    document.getElementById("Resposta").innerHTML= resultat;
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>Imagina que estàs fent un SW per a la gestió de cotxes d’una empresa 
+    de lloguer de vehicles. Una de les característiques a tenir en compte, és el nombre de portes. Demana a l’usuari quantes portes ha de tenir el cotxe. 
+    Si l’usuari ha introduït un 3, el programa ha de mostrar per pantalla: “És un cotxe esportiu”, si l’usuari ha introduït un 5, el programa ha de mostrar: 
+    “És un cotxe familiar”. Si l’usuari ha introduït un nombre diferent de portes, el programa ha de mostrar:
+     Segur que el cotxe té “X” portes?</h3>
+<body>
+    <p>Quantes portes té el teu cotxe</p>
+
+    <input type="text" id="Caixa" placeholder="Introduir el nombre de portes">
+
+    <input type="button" onclick="Guarda()" value="Guarda">
+
+    <p id="Resposta"></p>
+
+<script>
+
+    let Portes3 = "El teu cotxe és esportiu";
+    let Portes5 = "El teu és familir";
+
+
+    function Guarda(){
+        var portes = parseInt(document.getElementById("Caixa").value);
+        
+        if (portes == 3) {
+            document.getElementById("Resposta").innerHTML=Portes3;
+        }
+        else if (portes == 5) {document.getElementById("Resposta").innerHTML=Portes5;
+            
+        } else {document.getElementById("Resposta").innerHTML= "Segur que el teu cotxe té " + portes + " " + "portes";
+            
+        }
+            
+        }
+    
+
+</script>
+
+    
+
+</body>
+</html>

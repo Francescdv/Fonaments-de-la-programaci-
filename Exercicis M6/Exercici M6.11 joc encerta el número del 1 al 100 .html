@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Volem crear un programa per tal que l’usuari jugui a encertar un nº de l’1 al 100 que l’ordinador haurà “pensat” prèviament. 
+        El programa haurà de demanar un nº per teclat al jugador i haurà de mostrar, en funció del nº introduït, un dels següents missatges:
+
+
+        El número és inferior a "X" (X número escollit per l'usuari)
+        El número és superior a "X" (X número escollit per l'usuari)
+        
+        Has encertat!
+        
+        Aquest procés s’ha de repetir fins que l’usuari encerti el nº pensat per l’ordinador.
+        
+        Ajuda: Math.ceil(Math.random() * 100);</h3>
+</head>
+<body>
+       
+    <input type="button" onclick="Encerta()" Value=Click aquí>
+   
+
+    <Script>
+        function Encerta() {
+            let numero = Math.ceil((Math.random() * 100));
+            let intent;
+            let resposta;
+
+            do{
+                intent = parseInt(prompt("Endevina el número del 1 al 100"));
+
+                if (intent > numero) {alert("El número és inferior a " + intent);
+
+            }else if (intent < numero) {alert("El número és superior a " + intent);
+       
+            }else if(intent == numero){alert("Has encertat el número era el " + numero);}
+            
+             }while (intent != numero) 
+            
+         
+        }
+    </Script>
+</body>
+</html>

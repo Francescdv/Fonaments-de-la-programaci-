@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>CINE
+    Nos piden hacer un programa orientado a objetos sobre un cine (solo de una sala) tiene un conjunto de asientos (3 filas por 5 columnas).
+    
+    Del cine nos interesa conocer la película que se está reproduciendo y el precio de la entrada en el cine.
+    De las películas nos interesa saber el título, duración, edad mínima y director.
+    Del espectador, nos interesa saber su nombre, edad y el dinero que tiene.
+    Los asientos son etiquetados por una letra (columna) y un número (fila), como se muestra en la tabla. También deberemos saber si está ocupado o no el asiento.
+    1A 1B 1C 1D 1E
+    2A 2B 2C 2D 2E
+    3A 3B 3C 3D 3E
+    Realizaremos una pequeña simulación, en el que generaremos entre 5 y 10 espectadores y los sentaremos aleatoriamente de uno en uno (no podemos donde ya este ocupado).
+    
+    Solo se podrá sentar si tienen el suficiente dinero, hay espacio libre y tiene edad para ver la película, en caso de que el asiento este ocupado le buscamos uno libre.
+    Los datos del espectador y la película pueden ser totalmente aleatorios.
+    La simulación deberá ir mostrando los pasos de cálculo, por ejemplo:
+    ●	Llenando la sala para la película “…” con precio X€ para mayores de X edad.
+    ●	Sentando al espectador Pedro, con X años y X dinero
+    ●	El espectador no tiene suficiente dinero
+    ●	Sentando a la espectadora Ana, con X años y X dinero
+    ●	Sentada en el asiento 1C
+    ●	Sentando a la espectadora Silvia, con X años y X dinero
+    ●	La espectadora no tiene suficiente edad
+    ●	Sentando al espectador Daniel, con X años y X dinero
+    ●	El asiento 1C está ocupado, tratando de buscar otro asiento
+    ●	Sentado en el asiento 2B
+    ●	…
+    ●	Se han gestionado todos los espectadores 😊
+    </h3>
+<body>
+    <script src="CineObj.js"></script>
+    <script src="pelicula.js"></script>
+    <script src="seient.js"></script> 
+    <script src="espectador.js"></script>
+    <script src="cinemaMain.js"></script>
+
+    
+    <p>Crida deu espectadors les vegades que vulguis!!!!</p>
+    <input type="button" onclick="crearEspectadors()" Value="Crida la gent">
+
+    <p>Comença la sessió!!!!</p>
+    <input type="button" onclick="acomodarEspectadors()" Value="Començar sessió">
+
+</body>
+</html>

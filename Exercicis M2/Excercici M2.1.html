@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercici M2.1</title>
+</head>
+
+<p>Fer un programa que li demani a l’usuari mitjançant el prompt: El nom, el cognom i l’edat de l’usuari. Un cop l’usuari hagi acabat d’introduir les dades, aquestes s’han de mostrar per consola, amb un popup i mitjançant getElementById().</p>
+
+<div>
+<p id="Nom"></p>
+<p id="Cognom"></p>
+<p id="Edad"></p>
+</div>
+
+<body>
+
+<style>
+div{font-size: x-large; color: blue;}    
+</style>
+
+
+<script>
+
+    var Name = prompt("Quin és el teu nom?");
+    var Surname= prompt ("Quin és el teu cognom?");
+    var Age= prompt ("Quina edad tens?");
+    var X1= "El teu nom és :"
+    var X2= "El teu cognom és :"
+    var X3= "La teva edad és "
+
+alert(Name + " " + Surname + " " +  "de" + " " + Age + " " + "anys" + " " + "benvingut a la meva primera web",);
+
+document.getElementById("Nom").innerHTML = X1 + Name;
+document.getElementById("Cognom").innerHTML = X2 + Surname;
+document.getElementById("Edad").innerHTML = X3 + Age;
+
+console.log( X1 + Name);
+console.log( X2 + Surname);
+consele.log( X3 + Age)
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>

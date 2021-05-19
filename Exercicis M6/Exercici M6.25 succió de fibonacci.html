@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>L’usuari introdueix un nombre per pantalla i el programa li ha de mostrar la successió de Fibonacci.
+
+        Exemple:
+        
+        Si l’usuari introdueix el 10 el resultat ha de ser:
+        
+        0,1,1,2,3,5,8,13,21,34</h3>
+</head>
+<body>
+
+    <p id="resposta"></p>
+
+    <script>
+
+         let numUsuari = Number (prompt("Quants números de la succció de fibonacci vols veure?"))
+         let arrayfibonacci = []
+
+
+        let nouNum;
+        let num1 = 1;
+        let num2= 0;
+        for(i = 0; i<= numUsuari; i++){
+            arrayfibonacci.push(nouNum);
+            nouNum = num1 + num2; 
+            num1 = num2;
+            num2 = nouNum;
+    
+        } document.getElementById("resposta").innerHTML= arrayfibonacci
+
+
+
+    </script>
+    
+</body>
+</html>

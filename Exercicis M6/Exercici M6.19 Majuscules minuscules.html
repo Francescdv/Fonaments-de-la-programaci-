@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h3>Comprovar si una frase introduïda per l’usuari està formada només per minúscules, 
+        només per majúscules o per minúscules i majúscules</h3>
+</head>
+<body>
+
+    <p>La teva frase està formada per majúscules, minúscules o ambdues?</p> 
+    <input type="button" onclick="intro()" Value="inserta la frase">
+
+    <Script>
+
+        function intro(){
+
+        let frase_usuari = prompt("introdueix una frase")
+        let resposta; 
+        
+
+    if(frase_usuari == frase_usuari.toUpperCase()){ resposta = window.alert("La teva frase està escrita només amb majúscules");
+    }else if(frase_usuari == frase_usuari.toLowerCase()){ resposta =  window.alert("La teva frase està escrita només amb minúscules"); 
+    }else{resposta ==  window.alert("La teva frase conté majúscules i minúscules")}
+
+}
+
+
+    </Script>
+    
+</body>
+</html>

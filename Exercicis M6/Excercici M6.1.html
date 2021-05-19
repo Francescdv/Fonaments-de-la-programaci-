@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <p>Crea un programa que tingui dues caixes de text on l’usuari ha d'introduir dues notes i el programa ha de mostrar per pantalla la mitja de les dues notes.</p>
+</head>
+<body>
+    <p>Introdueix una nota a cada caixa per obtenir la mitja</p>
+    <P><input type="text" id="Caixa1"></P>
+    <P><input type="text" id="Caixa2"></P>
+    <p id="resposta">La teva mitja és:</p>
+
+    <P><input type="button" onclick="mitja()" value="Guarda"></P>
+
+    <script>
+           function mitja(params) {
+        
+           let nota1 = Number (document.getElementById("Caixa1").value);
+           let nota2 = Number (document.getElementById("Caixa2").value);
+           let resultat = (nota1 + nota2)/2
+           document.getElementById("resposta").innerHTML= resultat}
+           
+
+
+
+    </script>
+
+
+</body>
+</html>

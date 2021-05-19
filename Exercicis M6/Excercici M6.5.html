@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h3>Taula de multiplicar. L’usuari introduirà un número per pantalla i el programa li mostrarà la taula de multiplicar d’aquell número.</h3>
+</head>
+
+<body>
+    <p id="resposta"></p>
+
+    <script>
+        let num1 = Number (prompt("Introduix un número per veure la seva taula de multiplicar"));
+        let resultado="";
+
+        
+        for(let i=1; i<= 10; i++){
+           resultado += num1 + "x" + [i] + "=" + (num1*i)  + "<br>";
+        }   
+        
+        document.getElementById("resposta").innerHTML= resultado;
+    </script>
+</body>
+</html>
+

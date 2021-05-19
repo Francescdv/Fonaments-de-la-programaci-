@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>En aquest programa l’usuari ha d’introduir un string i el programa ha de mostrar l’string al revés</h3>
+</head>
+<body>
+
+    <P><input type="text" id="Xparaules"></P>
+
+    <P><input type="button" onclick="guardaparaules()" value="Guarda"></P>
+
+    <p>La teva llista</p>
+
+    <p id="Resposta"></p>
+<body>
+    <script>
+       
+        function guardaparaules() {
+            let nParaules = Number (document.getElementById("Xparaules").value);
+            let resultat = llistaalreves(nParaules) }
+
+
+
+
+
+
+
+            function llistaalreves(num){
+                let llista = [];
+                let text= "";
+
+            for (i=0; i<num; i++){
+                let paraula = prompt("Escriu una paraula");
+                llista.push(paraula);
+
+               
+            }
+            for (a=llista.length -1; a >= 0 ; a--){
+                text += llista[a] + "<br>";
+            }   
+           
+
+        return document.getElementById("Resposta").innerHTML = text; 
+        }
+   
+        
+
+        </script>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>1.	Programa amb una funció que li passem un nombre com a paràmetre i imprimeix a consola (ex num 5): 
+        -	Iniciant el compte enrere
+        -	5
+        -	4
+        -	3
+        -	2
+        -	1
+        -	0
+        -	Compte enrere acabat
+        </h3>
+</head>
+<body>
+
+    <P><input type="text" id="compteEnrere" placeholder="Introdueix el número"></P>
+
+</P><input type="button" onclick="Comença()" value="Click me"></P>
+
+<script>
+    function Comença(){
+        let num = Number (document.getElementById("compteEnrere").value);
+
+        compteEnrere(num);
+
+   
+    }
+
+
+    function compteEnrere(num){
+        for(i = num; i>= 0; i--)
+        console.log(i);
+    }
+
+</script>
+
+    
+</body>
+</html>

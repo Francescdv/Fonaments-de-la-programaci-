@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Fes un programa que mostri el següent per pantalla:
+
+        *
+        
+        * *
+        
+        * * *
+        
+        * * * *
+        
+        * * * * *
+        
+        * * * * * *
+        
+        * * * * *
+        
+        * * * *
+        
+        * * *
+        
+        * *
+        
+        *
+        
+        La línea amb més “*” vindrà donada per un número que l’usuari introduirà en una caixa de text.
+        
+        Condició: En tot el codi del programa només hi pot haver-hi dos *</p>
+
+    <input type="text" id="Caixa" placeholder="ex: 14">
+
+    <input type="button" onclick="Guarda()" value="Ok">
+
+    <p id="resposta"></p>
+
+    <script>
+
+        function Guarda(){
+        var filas = document.getElementById("Caixa").value
+        let resultado;
+
+        for(let i=1; i<= filas; i++){
+                for( let a =1; a <= i; a++){
+                    document.write("*")
+                } document.write("<br>")
+            }
+
+                for(let b=2; b<= filas; b++){
+            for( let c = filas; c >= b; c--){
+                document.write("*")
+            } document.write("<br>")
+
+
+
+            }
+
+            
+
+           
+           
+    }   
+
+
+
+        
+    </script>
+</body>
+</html>

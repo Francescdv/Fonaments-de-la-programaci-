@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h3>Fer un programa on l’usuari introdueix per pantalla un caràcter i un número. El programa imprimeix per pantalla un quadrat amb la mida i el caràcter introduïts per l’usuari.
+
+        Exemple:
+        
+        % % % % %
+        
+        % % % % %
+        
+        % % % % %
+        
+        % % % % %
+        
+        % % % % %</h3>
+</head>
+<body>
+   
+    
+    <input type="button" onclick="crearcuadrat()" value="Ok">
+
+    <p id="resposta"></p>
+
+    <script>
+        function crearcuadrat(){ 
+        let simbol = prompt("Escull amb quin simbol vols fer el quadrat");
+        let filas =prompt("Escull el nombre de files")
+        let allargada =prompt("Escull l'allargada de cada linea")
+        let resultado = forma(simbol, filas, allargada)
+
+
+
+
+        
+        
+         function forma(simbol, files, allargada){
+        for(let i=1; i<= filas; i++){
+            for( let a =1; a <= allargada; a++){
+                document.write(simbol)
+
+            } document.write("<br>")
+        }
+
+        }
+    }
+    
+    </script>
+
+</body>
+</html>

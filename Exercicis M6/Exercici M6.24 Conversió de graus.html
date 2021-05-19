@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h3>Crea un programa on l’usuari introdueixi una temperatura en ºC i es mostri per pantalla la conversió en ºFahrenheit</h3>
+</head>
+<body>
+
+    <p>Converteix els graus celsius a farenheit</p>
+    <p><input type="button" onclick="celsius()" value="ºC => ºF "></p>
+    <p id="resposta1"></p>
+    <p>Converteix els graus farenheit a celcius</p>
+    <p><input type="button" onclick="farenheit()" value="ºF => ºC"></p>
+    <p id="resposta2"></p>
+
+
+    
+    
+</body>
+
+<script>
+
+    function celsius(){
+        let grausC = Number (prompt("Introdueix la temperatura en ºC"))
+        resultat = conversio(grausC)
+        document.getElementById("resposta1").innerHTML=resultat  + "º graus Farenheit"
+    }
+
+    function farenheit(){
+        let grausF = Number (prompt("Introdueix la temperatura en ºC"))
+        resultat2 = conversio(grausF)
+        document.getElementById("resposta2").innerHTML=resultat2  + "º graus Celsius"
+    }
+
+
+
+
+
+function conversio(c){
+     return (c * 9 / 5) + 32
+
+}
+
+function conversio(f){
+     return (f -32) * 5/9
+
+}
+
+
+
+
+
+
+</script>
+</html>

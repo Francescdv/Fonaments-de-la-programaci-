@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>1.	Crea un menú que imprimeixi per consola les opcions:
+MENU: 1) seguir al programa // 2) seguir al programa   // 3) sortir
+	S’ha de mostrar el menú de nou mentre l’usuari premi 1 o 2, si selecciona 3, el programa ha d’acabar amb un missatge de “Adeu!!”
+
+2.	Imprimeix nombres entre 1 i 15 de la següent manera (els nombres han d’estar en un array):
+a.	De 1 a 15 🡪 (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)
+b.	De 15 a 1 🡪 (15,14,13,12,11,10,9,8,7,6,5,4,3,2,1)
+c.	De 1 a 15 només els parells 🡪 (2,4,6,8,10,12,14)
+d.	De 1 a 15 de 5 en 5 🡪 (1, 5, 10, 15)
+</h3>
+
+
+<body>
+    
+<script>
+
+/* let opcio;
+do{opcio = Number (prompt("1. seguir al programa, 2. Seguir al programa, 3. Sortir"))
+let resp; 
+
+switch(opcio){
+    case 1:
+
+    case 2: 
+    resp = console.log("Segueixes al programa")
+        break;
+    case 3: resp = console.log("Adeu")
+        break;
+}
+
+}while(opcio != 3) */
+
+
+// Exercici A 
+
+let arrayExA = [];
+
+for(let i = 0; i <= 15; i++){
+    arrayExA.push(i)
+}
+
+//  Exercici B 
+let arrayExB = [];
+
+for(let i= 15; i >= 0; i-- ){
+    arrayExB.push(i)
+
+}
+
+
+//Exercici C
+let arrayExC = [];
+
+for(let i = 0; i <= 15; i++){
+    
+if (i %2 == 0){
+    arrayExC.push(i)
+}
+}
+
+//Exercici D
+let arrayExD = [];
+let resultat;
+
+for(let i = 0; i <= 3; i++){
+    resultat = 5 * i;
+    arrayExD.push(resultat)
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

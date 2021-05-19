@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <p>Crea un programa on l’usuari introdueixi tres notes en tres caixes de text i el programa calculi la mitja. 
+    Si la mitja és inferior a 5 ha de mostrar el següent missatge per pantalla: “No has superat el curs. Has de recuperar”, 
+    si la mitja està entre 5 i 7 ha de mostrar: “Enhorabona! Has aprovat però hauries de seguir practicant”, si la mitja és superior a 7 ha de mostrar: 
+    ”Enhorabona! Has superat el curs! Passa ja al següent nivell!</p>
+
+
+</head>
+<body>
+
+    <p>Introdueix una nota a cada caixa per obtenir la mitja</p>
+    <P><input type="text" id="Caixa1"></P>
+    <P><input type="text" id="Caixa2"></P>
+    <P><input type="text" id="Caixa3"></P>
+    <p id="resposta">La teva mitja és:</p>
+
+    <P><input type="button" onclick="mitja()" value="Guarda"></P>
+
+    <script>
+           function mitja(params) {
+        
+           let nota1 = Number (document.getElementById("Caixa1").value);
+           let nota2 = Number (document.getElementById("Caixa2").value);
+           let nota3 = Number (document.getElementById("Caixa2").value);
+           let resultat= calcul(nota1, nota2,nota3)
+           let text;
+
+           document.getElementById("resposta").innerHTML = text;
+
+
+           if(resultat <5)
+           {document.getElementById("resposta").innerHTML="No has superat el curs. Has de recuperar"}
+
+           else if (resultat <=7)
+           {document.getElementById("resposta").innerHTML="Enhorabona! Has aprovat però hauries de seguir practicant"}
+
+           else
+           {document.getElementById("resposta").innerHTML="Enhorabona! Has superat el curs! Passa ja al següent nivell"}
+
+
+
+           }
+
+           function calcul (x,y,z){
+           return (x+y+z)/3}
+
+           
+
+    </script>
+    
+</body>
+</html>

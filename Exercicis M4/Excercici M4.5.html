@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Modificar el programa 10. Ara el programa només ha de poder donar 5 beques. El programa anirà demanant les dades dels alumnes fins que es donin aquestes 5 beques. 
+        Un cop el programa hagi assignat les 5 beques s’ha de mostrar per pantalla els noms dels 5 alumnes que tenen beca.</h3>
+
+</head>
+<body>
+     
+    <p>Introdueix el número d'alumnes a matricular</p>
+
+    <p><input type="text" id="alumnes" placeholder="Número d'alumnes"></p>
+    <p><input type="button" onclick=beca() value ="Click"></p>
+    <p id="llista">Aquest són els alumnes que obtindran la beca</p>
+
+    <script>
+
+        
+
+        function beca(){
+            let nalumnes = document.getElementById("alumnes").value;
+            let nom;
+            let edat;
+            let titoluni;
+            let atur;
+            let text;
+            let llista =[]
+            let i=0
+
+            do{
+                nom =  prompt("Introdueix el nom de l'alumne" + " " + i);
+                edat = Number (prompt("Introdueix l'edat de l'alumne" + " " + i));
+                titoluni = prompt("Introdueix titulació universitaria si/no" + " ");
+                atur = prompt("Introdueix si està a l'atur si/no" + " ");
+
+                if(edat >= 18 && titoluni == "si"){
+                    llista.push(nom + "<br>"  );
+                    
+                }else if(atur == "si"){
+                    llista.push(nom + "<br>");
+                    
+                } i++
+            }
+            while(( 5 > llista.length) && (i < nalumnes));
+
+            document.getElementById("llista").innerHTML= llista;
+
+            
+
+            
+            }
+
+           
+            
+
+
+
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>Fer un programa que demani a l’usuari quin dia i quin mes va néixer, amb aquesta informació el programa mostra per pantalla, de quin signe del zodíac és.</h3>
+
+<body>
+
+    <p id="Resposta"></p>
+
+    
+
+    <script>
+    
+    let dia = parseInt(prompt("Indica en quin dia vas nèixer númericament"));
+    let mes = parseInt(prompt("Indica en quin mes vas nèixer númericament"));
+    let signe;
+
+    switch (mes) {
+        case 1:
+          if (dia <= 19) {
+            resultat = "Capricorn";
+          } else {
+            resultat = "Aquari";
+          } 
+          break;
+        case 2:
+          if (dia <= 18) {
+            resultat = "Aquari";
+          } else {
+            resultat = "Peixos";
+          }
+          break;
+        case 3:
+          if (dia <= 21) {
+            resultat = "Peixos";
+          } else {
+            resultat = "Àries";
+          }
+          break;  
+        case 4:
+          if (dia <= 20) {
+            resultat = "Àries";
+          } else {
+            resultat = "Taure";
+          }
+          break; 
+        case 5:
+          if (dia <= 21) {
+            resultat = "Taure";
+          } else {
+            resultat = "Gèminis";
+          }
+          break; 
+        case 6:
+          if (dia <= 21) {
+            resultat = "Gèminis";
+          } else {
+            resultat = "Càncer";
+          }
+          break; 
+        case 7:
+          if (dia <= 22) {
+            resultat = "Càncer";
+          } else {
+            resultat = "Lleó";
+          }
+          break; 
+        case 8:
+          if (dia <= 23) {
+            resultat = "Lleó";
+          } else {
+            resultat = "Verge";
+          }
+          break; 
+        case 9:
+          if (dia <= 22) {
+            resultat = "Verge";
+          } else {
+            resultat = "Balança";
+          }
+          break; 
+        case 10:
+          if (dia <= 23) {
+            resultat = "Balança";
+          } else {
+            resultat = "Escorpió";
+          }
+          break; 
+        case 11:
+          if (dia <= 22) {
+            resultat = "Escorpió";
+          } else {
+            resultat = "Sagitari";
+          }
+          break; 
+        case 12:
+          if (dia <= 21) {
+            resultat = "Sagitari";
+          } else {
+            resultat = "Capricorn";
+          }
+          break; 
+        default:
+          resultat = "Valors incorrectes";
+      }
+
+
+    
+      document.getElementById("Resposta").innerHTML = "El teu signe del zodíac és: " + resultat;
+    </script>
+    
+</body>
+</html>

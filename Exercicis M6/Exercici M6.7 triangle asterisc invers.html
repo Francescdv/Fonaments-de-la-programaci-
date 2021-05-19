@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Fes un programa que mostri el següent per pantalla:
+
+        * * * * * *
+        
+        * * * * *
+        
+        * * * *
+        
+        * * *
+        
+        * *
+        
+        *
+        
+        El nombre de línies formades per “*” vindrà donat per un número que l’usuari introduirà en una caixa de text.
+        
+        Condició: En tot el codi del programa només hi pot haver un *</p>
+
+    <input type="text" id="Caixa" placeholder="ex: 14">
+
+    <input type="button" onclick="Guarda()" value="Ok">
+
+    <p id="resposta"></p>
+
+    <script>
+
+        function Guarda(){
+        var filas = document.getElementById("Caixa").value
+        let resultado;
+
+        for(let i=1; i<= filas; i++){
+            for( let a = filas; a >= i; a--){
+                document.write("*")
+            } document.write("<br>")
+
+
+            }
+
+           
+           
+    }   
+
+
+
+        
+    </script>
+</body>
+</html>

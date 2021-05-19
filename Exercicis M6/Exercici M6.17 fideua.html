@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Un grup d’amics ha quedat per fer una fideuà, els ingredients principals seran: fideus, gambes, i calamars. 
+        Saben que per cada quatre persones han d’utilitzar mig quilo de fideus, 400 grams de calamars i 200 grams de gambes. 
+        S’ha de fer un programa que demani per pantalla el preu per quilo de cada ingredient i el nombre d’amics que seran per dinar. 
+        El programa ha de calcular les quantitats necessàries de cada ingredient, el preu per persona i el preu final de la fideuà.</h3>
+</head>
+<body>
+
+    <p id=respostes></p>
+
+    <script>
+
+        let quantF = 400;
+        let quantG = 200;
+        let quantC = 400;
+
+        let preuF = Number (prompt("Quin és el preu per gram dels fideus"));
+        let preuG = Number (prompt("Quin és el preu per gram de les gambes"));
+        let preuC = Number (prompt("Quin és el preu per gram dels calamars")); 
+        let nombre_amics = Number (prompt("Quanta gent vindrà a la fideuà"));
+     
+
+        let preu_final = Number (preutotal(preuF, preuC, preuG, nombre_amics));
+        let preu_persona = preu_final/nombre_amics;
+        let quantitat_fideus = calculaQI(quantF, nombre_amics);
+        let quantitat_gambes= calculaQI(quantG, nombre_amics);
+        let quantitat_calamars = calculaQI(quantC, nombre_amics);
+
+        let resopsta1 = "Quantitats:" + "<br>" + "Fideus:"+ " " + quantitat_fideus + "gr" + "<br>" + "Gambes:"+ " " + quantitat_gambes + "gr" + "<br>" + "Calamars:"+ " " + quantitat_calamars + "gr" + "<br>";
+        let resposta2 = "El preu total és " + preu_final + "y per cada persona haurà de pagar " + preu_persona;
+        
+
+        document.getElementById("respostes").innerHTML= resopsta1 + resposta2;
+
+        
+
+
+
+
+
+
+
+
+
+        function preutotal(menjarx, menjar2y, menjar3z, persones){
+            ppmenjar1 = ((persones * 500) / 4) * menjarx;
+            ppmenjar2 = ((persones * 400) / 4) * menjar2y; 
+            ppmenjar3 = ((persones * 200) / 4) * menjar3z;
+            return (ppmenjar1 + ppmenjar2 + ppmenjar3)
+            
+        }
+
+        function calculaQI(q1, persones){
+            qmenjar1 = (q1 / 4)*persones
+            return qmenjar1
+
+        }
+
+        
+
+        
+
+
+
+    </script>
+
+    
+    
+</body>
+</html>

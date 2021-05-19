@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Aquest programa li demana l’edat a l’usuari, en funció d’aquesta, mostrarem un dels següents missatges per pantalla:
+
+        Si té 5 anys o menys: preescolar
+        Si té entre 6 i 11 anys: primària
+        Si té entre 12 i 15: ESO
+        Si té entre 16 i 18: Batxillerat
+        Si té més de 18: FP o Universitat </h3>
+</head>
+<body>
+
+    <input type="text" id="Caixa" placeholder="Edad">
+
+    <input type="button" onclick="Guarda()" value="Guarda">
+
+    <p id="Resposta"></p>
+    
+    <script>
+        function Guarda() {
+            var edat = document.getElementById("Caixa").value;
+            if (edat <= 5) {
+                document.getElementById("Resposta").innerHTML= "Preescolar";
+            } else if (edat <= 11){ document.getElementById("Resposta").innerHTML= "Primaria";
+
+            } else if (edat <= 15){ document.getElementById("Resposta").innerHTML= "ESO";
+                
+            }else if (edat <= 18){ document.getElementById("Resposta").innerHTML= "Batxillerat";
+            }else  {document.getElementById("Resposta").innerHTML= "FP o Universitat";}
+            
+
+            
+        }
+    </script>
+
+
+</body>
+</html>

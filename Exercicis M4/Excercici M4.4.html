@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h3>Modificar el programa 11. En aquest cas, a més, s’estableix un número màxim de 5 intents. Si l’usuari encerta el número escollit pel programa en aquests 5 intents, 
+    el programa mostra el següent missatge per pantalla: “Enhorabona, el número és X i has necessitat Y intents per encertar-lo”. 
+    Si no encerta el número amb els 5 intents, el programa mostra per pentalla: "Has utilitzat massa intents! El número és X ".</h3>
+<body>
+    
+    <input type="button" onclick="Encerta()" Value=Click aquí>
+    <P id="noHasencertat"></P>
+
+    <Script>
+        function Encerta() {
+            let Numero = Math.ceil((Math.random() * 10));
+            let nusuari;
+            let intent = 1;
+            let error= document.getElementById("noHasencertat" ).innerHTML= "Has superat el número d'intents establert el número es el " + Numero;
+
+            do{nusuari= parseInt(prompt("Endevina el número del 1 al 10"));
+            intent++;
+            if(nusuari != Numero){ alert("Tornar-ho a intentar")}
+            else if (nusuari == Numero) {
+                 alert("Felicitats el número era el " + Numero + "has necesitat " + intent + " " + "intents" )}
+           else if(intent >= 5){error}
+        
+        }while ((intent <= 5) && (nusuari != Numero));
+
+
+        }
+    </Script>
+
+
+
+</body>
+</html>

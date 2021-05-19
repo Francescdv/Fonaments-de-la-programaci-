@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <p><h3>L’usuari ha d'introduir un número en una caixa de text i el programa ha de mostrar per pantalla si el número és parell o imparell.</h3></p>
+
+</head>
+<body>
+    <p>"Escriu un número per saber si és parell o imparell")</p>
+
+    <input type="text" id="Caixa" placeholder="ex: 14">
+
+    <input type="button" onclick="Guarda()" value="Ok">
+
+    <p id="resposta"></p>
+
+    <script>
+        function Guarda(){
+        var num = document.getElementById("Caixa").value
+
+        if (num %2 == 0) {document.getElementById("resposta").innerHTML = "El teu número és parell"
+
+    }else{document.getElementById("resposta").innerHTML = "El teu número és imparell"}
+}
+        
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <p>L’usuari ha d’introduir dos números, el programa retornarà “Un dels dos números és negatiu”, només si un dels dos números és negatiu.</p>
+</head>
+<body>
+    
+    <p id="resposta"></p>
+
+
+    <script>
+
+        var num1 = Number (prompt("Escriu un número"));
+        var num2 = Number (prompt("Escriu un número"));
+
+       if (num1 <0 && num2 >=0) {document.getElementById("resposta").innerHTML=  "Un dels dos números és negatiu";   
+       
+    }else if (num1 >=0 && num2 <0) {document.getElementById("resposta").innerHTML=  "Un dels dos números és negatiu"; 
+    
+    }else{document.getElementById("resposta").innerHTML="Escriu només un número negatiu"}
+
+       
+      
+    </script>
+
+
+</body>

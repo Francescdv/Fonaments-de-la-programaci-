@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Calculadora arcaica. El programa demana a l’usuari mitjançant prompts l’operació que desitja realitzar i els números amb els quals vol operar. 
+        Cada operació (suma, resta, multiplicació, divisió i mòdul) estarà programada en una funció diferent.</h3>
+
+</head>
+<body>
+
+ <p id="resposta"></p>
+    
+
+    <script>
+
+       
+        let num1 = parseInt(prompt("Número 1"));
+        let num2 = parseInt(prompt("Número 2"));
+        let operacio = prompt("Operació");
+
+            
+        
+        switch(operacio){
+            case "+":
+                Suma(num1,num2);
+            break; 
+            case "-":
+                Resta(num1, num2);
+            break;
+            case "*":
+                Multiplicacio(num1, num2);
+            break;
+            case "/":
+                Divisio(num1, num2);
+            break;
+            default:
+            document.getElementsByClassName("resposta").innerHTLM ="Error";
+
+
+        }
+
+        function Suma(p1, p2){
+        let suma = p1+p2;
+         document.getElementById("resposta").innerHTML = suma;
+        }
+    
+        function Resta(p1, p2){
+        let resta = p1-p2; 
+        document.getElementById("resposta").innerHTML = resta;
+    }
+
+        function Multiplicacio(p1, p2){
+        let multiplicacio = p1*p2; 
+        document.getElementById("resposta").innerHTML = multiplicacio;
+    }
+
+        function Divisio(p1, p2){
+        let divisio = p1/p2; 
+        document.getElementById("resposta").innerHTML = divisio;
+    }
+
+    </script>
+
+    
+</body>
+</html>
+
+   

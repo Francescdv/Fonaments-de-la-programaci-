@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>L’usuari ha d’introduir un DNI i el programa ha de dir si la lletra és correcte o no amb el nombre de DNI. Si la lletra no és correcta, ha de dir quina lletra és la correcta</h3>
+
+<body>
+    <p>Quina és la lletra del teu DNI?</p> 
+    <input type="button" onclick="intro()" Value="inserta els números">
+
+    <script>
+        function intro(){
+        let dniN = Number (prompt("Introdueix el número del teu DNI"));
+        let dniL = (prompt("Introdueix la lletra"));
+        let lletra =  calcullletra(dniN);
+        if (dniL.toUpperCase() == lletra){window.alert("la lletra és correcta")}
+        else{window.alert("La lletra és incorrecte hauria de ser una " + lletra)}
+        
+        
+    }
+
+
+
+        function calcullletra(numdni){
+            let r =numdni %23
+            let taulalletra = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H","L", "C","K", "E"]
+            return taulalletra[r]
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>

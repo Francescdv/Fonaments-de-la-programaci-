@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Serà diumenge el primer día de l'any?</p> 
+    <input type="button" onclick="intro()" Value="inserta l'any aquí">
+   
+
+    <script>
+
+    function intro(){
+
+    let any = Number (prompt("ANY!!"));
+    let fecha = new Date(any, 0, 1);
+    let dia = fecha.getDay();
+
+    if(dia == 0){alert("És diumenge, enhorabona!")}
+    else{alert("Es un altre día")}
+}
+
+ 
+      /*fecha.setYear(1958);
+    console.log(fecha); */
+
+
+    </script>
+</body>
+</html>
+
+
+

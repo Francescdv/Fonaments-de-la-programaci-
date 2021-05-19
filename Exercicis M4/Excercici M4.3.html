@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h3>Aquesta línia de codi: Math.ceil((Math.random() * 10)); 
+    Retorna un número entre l’1 i el 10 de forma aleatòria. 
+    L’exercici consisteix a què l’usuari ha d'endevinar el número escollit aleatòriament pel programa. El programa, mitjançant “prompts”, anirà demanant números a l’usuari fins que aquest encerti el número escollit pel programa. Un cop l’usuari hagi endevinat el número, es mostrarà per pantalla el següent missatge: “Enhorabona, el número era X”</h3>
+<body>
+    
+    <input type="button" onclick="Encerta()" Value=Click aquí>
+    <P id="Hasencertat"></P>
+
+    <Script>
+        function Encerta() {
+            let Numero = Math.ceil((Math.random() * 10));
+            let Intent = parseInt(prompt("Endevina el número del 1 al 10"));
+            let Resposta = "Genial, has guanyat el número era el " + Numero;
+
+            while (Intent != Numero) {
+                Intent = parseInt(prompt("Endevina el número del 1 al 10"));
+
+            }
+            
+            document.getElementById("Hasencertat").innerHTML = Resposta;
+        }
+    </Script>
+
+
+
+</body>
+</html>

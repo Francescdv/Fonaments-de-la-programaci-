@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h3>(M7) Exercici 5
+Crear un arxiu anomenat Cercles.html on l’usuari haurà d’introduïr les coordenades x, y de dos cercles i els seus respectius radis.
+
+En un fitxer main.js crea la classe Punt i la classe Cercle: 
+
+Classe Punt
+
+La classe Punt tindrà els atributs posicioX i posicioY. A més, tindrà el constructor parametritzat amb tots els atributs de la classe.
+
+Classe Cercle
+
+La classe Cercle tindrà els atributs centre (un punt) i el radi (distància entre el centre i qualsevol punt de la circumferència. A més, tindrà el constructor amb tots els paràmetres i els següents mètodes:
+
+⦁	distanciaCentres(altreCercle): Retorna la distància entre el centre del cercle actual i el rebut com a paràmetre.
+
+⦁	equals(altreCercle): Retorna true si dos cercles són iguals (si tenen el mateix centre i el mateix radi).
+
+⦁	sonConcentrics(altreCercle): Retorna true si dos cercles són concèntrics (tenen igual centre).
+
+⦁	tenenIgualRadi(altreCercle): Retorna true si dos cercles tenen el mateix radi.
+
+⦁	sonTangents(altreCercle): Retorna true si dos cercles són tangents.
+
+⦁	sonSecants(altreCercle): Retorna true si dos cercles són secants.
+
+⦁	noEsToquen(altreCercle): Retorna true si dos cercles no es toquen.
+
+</h3>
+
+
+<body>
+    <script src="Exercici M7.5classeCercle.js"></script>
+    <script src="Exercici M7.5.classePunt.js"></script>
+    <script src="Exercici M7.5CercleMain.js"></script>
+
+    <p>Crea els dos cercles que vols comparar</p>
+    <input type="button" onclick="crearcercle()" Value="Crear"> 
+
+    <p>Informació dels cercles</p>
+    <input type="button" onclick="infocercles()" Value="Compara"> 
+
+</body>
+</html>

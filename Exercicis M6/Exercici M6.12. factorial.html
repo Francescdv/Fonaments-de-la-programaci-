@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Realitzar un programa on l’usuari introdueix un número i el programa li retorna el factorial del número introduit</h3>
+
+</head>
+<body>
+    <p><input type= "text" id="numero"></p> 
+    <input type="button" onclick="factorial()" Value=factorial aquí>
+    <P id="resposta"></P>
+
+    <script>
+        function factorial(){
+
+        let num = Number (document.getElementById("numero").value)
+        resultat=1; 
+        
+        for(let i=1; i<= num; i++){
+            resultat = resultat*i
+           
+
+        }
+        alert(resultat)
+    }
+
+
+
+    </script>
+</body>
+</html>

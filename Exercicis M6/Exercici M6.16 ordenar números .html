@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Donat un array de nombres, el programa ha de mostrar per pantalla, el vector amb els nombres ordenats de menor a major</h3>
+</head>
+<body>
+    
+    <p><input type="button" onclick="llistaAleatoria()" value="Crea una llista de números aleatoris"></p>
+    <p id="array"></p>
+    <p><input type="button" onclick="ordenaLlista()" value="ordenar"></p>
+    <p id="arrayOrdenada"></p>
+    
+
+    
+    
+    <script>
+
+        function llistaAleatoria(){
+        let array = [];
+        let text = "";
+
+     for(let i = 0; 10>i; i++){ 
+        let numero = Math.ceil((Math.random() * 100));
+       
+        array.push(numero)
+        text += array[i] + ","
+       
+
+     } document.getElementById("array").innerHTML= text
+    } 
+
+    function ordenaLlista(){
+        bubble_sort(array, array.length)
+    }
+
+    function bubble_sort(A, n) {
+    let temp;
+    for(let k = 0; k< n-1; k++) {
+        // (n-k-1) is for ignoring comparisons of elements which have already been compared in earlier iterations
+
+        for(let i = 0; i < n-k-1; i++) {
+            if(A[ i ] > A[ i+1] ) {
+                // here swapping of positions is being done.
+                temp = A[ i ];
+                A[ i ] = A[ i+1 ];
+                A[ i + 1] = temp;
+            }
+        }
+    }
+}return text
+
+   
+
+   </script>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Realitzar un programa on se li mostraran 4 opcions a l’usuari per pantalla:
+
+        1.- Quadrat
+        
+        2.- Triangle
+        
+        3.- Rectangle
+        
+        4.- Cercle
+        
+        Segons l’opció escollida haurà d’introduir unes dades o altres perquè el programa mostri per pantalla l’àrea del polígon escollit.</h3>
+</head>
+<body>
+    <p>Calcula l'àrea d'un quadrat</p> 
+    <input type="button" onclick="quadrat()" Value=Àrea aquí>
+    <p id="resultat_quadrat"></p>
+    
+    <p>Calcula l'àrea d'un triangle"</p> 
+    <input type="button" onclick="triangle()" Value=Àrea aquí>
+    <p id="resultat_triangle"></p>
+
+    <p>Calcula l'àrea d'un rectangle</p> 
+    <input type="button" onclick="rectangle()" Value=Àrea aquí>
+    <p id="resultat_rectangle"></p>
+
+    <p>Calcula l'àrea d'un cercle</p> 
+    <input type="button" onclick="cercle()" Value=Àrea aquí>
+    <p id="resultat_cercle"></p>
+
+
+    <script>
+
+        let resultat;
+
+        function quadrat(){
+            let numQ1 = Number(prompt("Introdueix l'alçada del quadrat"));
+            let numQ2 = Number(prompt("Introdueix l'amplada del quadrat"));
+            let resultat = calculquadrat(numQ1, numQ2)
+            document.getElementById("resultat_quadrat").innerHTML = resultat;
+        }
+        function triangle(){
+            let numT1 = Number(prompt("Introdueix l'alçada del triangle"));
+            let numT2 = Number(prompt("Introdueix la base del triangle"));
+            let resultat = calcultriangle(numT1, numT2);
+            document.getElementById("resultat_triangle").innerHTML = resultat;
+        }
+
+        function rectangle(){
+            let numR1 = Number(prompt("Introdueix l'alçada del rectangle"));
+            let numR2 = Number(prompt("Introdueix l'amplada del rectangle"));
+            let resultat = calculrectangle(numR1, numR2)
+            document.getElementById("resultat_rectangle").innerHTML = resultat;
+        }
+
+        function cercle(){
+            let numC1 = Number(prompt("Introdueix el radi"));
+            let resultat = calculcercle(numC1)
+            document.getElementById("resultat_cercle").innerHTML = resultat;
+        }
+
+
+        function calculquadrat(num1, num2){
+        return num1 * num2;
+    }
+        function calcultriangle(num1, num2){
+        return ((num1 * num2)/2)
+    }
+        function calculrectangle(num1, num2){
+        return num1 * num2;
+    }
+        function calculcercle(num1){
+        return (2 * Math.PI * num1);
+    }
+
+   
+    </script>
+
+
+
+    
+</body>
+</html>

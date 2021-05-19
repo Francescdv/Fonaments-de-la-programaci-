@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h3>Una escola d’idiomes concedeix beques a futurs estudiants si compleixen una sèrie de requisits. 
+        Se’ls assigna una beca si l’alumne és major d’edat i si té un títol universitari,
+         o si l’alumne està a l’atur. El programa demana les tres dades per pantalla i el programa diu si l’alumne té o no la beca.</h3>
+</head>
+<body>
+   
+
+    <p id="Resposta"></p>
+    
+    <script>
+
+        let edat = parseInt(prompt("Indica la teva edat")); 
+        let tuniversitari = prompt("Indica si disposes d'un títul universitari SI/NO");
+        let atur = prompt("Indica si estás a l'atur SI/NO");
+
+        if (edat >= 18 && tuniversitari == "SI"){
+            document.getElementById("Resposta").innerHTML="Enhorabona! Tens beca";
+        }
+        else if (atur == "SI"){
+    
+            document.getElementById("Resposta").innerHTML="Enhorabona! Tens beca";
+        }else{document.getElementById("Resposta").innerHTML="No tens beca";
+    }
+            
+        
+
+        
+    </script>
+
+
+</body>
+</html>

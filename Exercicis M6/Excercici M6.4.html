@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Mostra per pantalla els nombres parells compresos entre el 100 i el 0 en ordre descendent.</h3>
+
+</head>
+<body>
+
+    <p id="pares"></p>
+ 
+
+    <script>
+
+        var pares=[];
+        var impares=[];
+
+        for(let i =100; i>=0; i--){
+            if (i%2 == 0) {pares.push( i + "<br>" );
+        }else{impares.push(i)}
+    }
+
+    document.getElementById("pares").innerHTML= pares;
+    
+
+
+
+    </script>
+
+
+</body>
+</html>

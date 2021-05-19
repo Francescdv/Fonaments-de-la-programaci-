@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>Un professor vol calcular les mitges de les notes de tota la classe. Crea una aplicació on l’usuari introduirà un número per pantalla 
+    (el número correspon al número de notes que vol introduir) i el programa li demanarà que inclueixi les notes de tots els alumnes.
+     Un cop les notes han sigut introduides, el programa retorna el següent: Si la nota mitja es menor que 5: “La nota media de la clase es de suspenso. Los alumnos deberían preguntar sus dudas y trabajar más por su cuenta". 
+     Si la nota es inferior a 7: "La nota media de la clase es buena pero los alumnos deberían mejorar el trabajo personal". Para el resto de casos,
+     el mensaje debería ser: "Enhorabuena! La nota media de la clase se corresponde con el esfuerzo que habéis realizado";</h3>
+</head>
+<body>
+    <p><input type= "text" id="nombrenotes"></p> 
+    <input type="button" onclick="mitja()" Value=Click aquí>
+    <P id="mitjanfinal"></P>
+
+    <Script>
+        
+        function mitja(){
+            let nnotes = Number (document.getElementById("nombrenotes").value);
+            let notesalumnes;
+            let llista =[];
+            let i=1;
+            let resultatfinal;
+            
+            
+           
+           
+
+            for(i =1; i <= nnotes; i++ ){
+               
+                notesalumnes = Number (prompt("Introdueix la nota"));
+                 llista.push(notesalumnes);}
+
+                 resultatfinal = mitjananotes(llista);
+
+                 if(resultatfinal <5)
+                 {document.getElementById("mitjanfinal").innerHTML="La nota media de la clase es de suspenso. Los alumnos deberían preguntar sus dudas y trabajar más por su cuenta"}
+                 else if (resultatfinal <=7)
+                 {document.getElementById("mitjanfinal").innerHTML="La nota media de la clase es buena pero los alumnos deberían mejorar el trabajo personal"}
+                 else if (resultatfinal >7)
+                 {document.getElementById("mitjanfinal").innerHTML="La nota media de la clase se corresponde con el esfuerzo que habéis realizado"}
+    
+        
+        }
+        function mitjananotes(mitjafinal){
+            let total=0;
+            for(let a = 0; a < mitjafinal.length; a++){
+                total += mitjafinal[a];
+               
+            }
+            return total/mitjafinal.length;
+
+        }
+    
+ 
+        
+        
+
+      
+        
+    
+    </Script>
+</body>
+</html>

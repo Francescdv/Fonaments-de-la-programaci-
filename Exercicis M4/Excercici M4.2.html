@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <p>Modificar el programa 5. En aquest programa, l’usuari introdueix una caixa de text amb el nombre d’alumnes a matricular i fa clic en un botó, 
+        llavors apareixen “prompts” per demanar el nom, l’edat, si l’alumne té títol universitari i si l’alumne està a l’atur. 
+        Aquestes dades es demanen tants cops com nombre d’alumnes hagi introduït l’usuari a la caixa de text.
+
+        Els requisits per obtenir la beca són: que l’alumne sigui major d’edat i estigui en disposició d’un títol universitari, o que l’alumne estigui a l’atur. 
+        Si es compleixen les condicions, l’escola li ofereix la beca.
+        
+        Un cop l’usuari hagi acabat d’introduir les dades, el programa ha de mostrar per pantalla el nom de tots els alumnes que tenen beca.
+        
+        </p>
+</head>
+<body>
+    
+    <p>Introdueix el número d'alumnes a matricular</p>
+
+    <p><input type="text" id="alumnes" placeholder="Número d'alumnes"></p>
+    <p><input type="button" onclick=beca() value ="Click"></p>
+    <p id="llista">Aquest són els alumnes que obtindran la beca</p>
+
+    <script>
+
+        let nom;
+        let edat;
+        let titoluni;
+        let atur;
+        let text;
+        let llista =[]
+
+        function beca(){
+            let nalumnes = document.getElementById("alumnes").value;
+            for(i = 1; i<= nalumnes; i++){
+                nom =  prompt("Introdueix el nom de l'alumne" + " " + i);
+                edat = Number (prompt("Introdueix l'edat de l'alumne" + " " + i));
+                titoluni = prompt("Introdueix titulació universitaria si/no" + " ");
+                atur = prompt("Introdueix si està a l'atur si/no" + " ");
+
+                if(edat >= 18 && titoluni == "si"){
+                    llista.push(nom + "<br>"  );
+                    
+                }else if(atur == "si"){
+                    llista.push(nom + "<br>");
+                    
+                }
+
+            
+            }
+
+            
+
+            document.getElementById("llista").innerHTML= llista
+
+
+
+
+
+        }
+
+
+    </script>
+
+
+    
+
+
+
+
+    
+
+
+    
+</body>
+</html>

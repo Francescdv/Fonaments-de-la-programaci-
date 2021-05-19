@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>L’usuari ha d’introduir números fins que introdueixi un nombre primer. En el moment que l’usuari introdueixi un nombre primer, 
+        el programa ha de treure per pantalla el següent missatge: Exacte, el número “x” és primer!</h3>
+</head>
+<body>
+    <p>Introdueix un número per saber si és primer</p> 
+    <input type="button" onclick="intro()" Value="inserta el número">
+
+    <script>
+        function intro(){
+        let resposta;
+
+        do{let numero_usuari = Number (prompt("Introdueix un número per saber si és primer"));
+        resposta = numeroprimer(numero_usuari)
+        if( resposta == 0){window.alert("És un número primer")
+    }else{window.alert("No és un número primer")}
+    
+    }while(resposta != 0 )
+}
+
+
+            
+        
+
+
+    
+    function numeroprimer(nUsuari){
+    let z = 0;
+    let prim;
+    for(let i= 1; i <= nUsuari; i++){
+        if(nUsuari % i == 0 ){
+            z++;
+    }   if(z== 2){prim = 0
+    }else{prim = 1}
+
+    }return prim
+
+}
+    
+
+</script>
+    
+    
+</body>
+</html>

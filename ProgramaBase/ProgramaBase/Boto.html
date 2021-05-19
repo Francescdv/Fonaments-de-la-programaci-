@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <P><input type="text" id="Llista" placeholder="Escriu aquí"></P>
+
+    </P><input type="button" onclick="Crearllista()" value="Click me"></P>
+
+    <p id="Mostrarllista"></p>
+
+    <script>
+        function Crearllista(){
+            var Paraula = document.getElementById("Llista").value;
+            document.getElementById("Mostrarllista").innerHTML=Paraula;
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

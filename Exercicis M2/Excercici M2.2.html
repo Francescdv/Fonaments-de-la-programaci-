@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>Fer un programa que li demani dos números a l’usuari. Al final, el programa imprimeix per pantalla el següent missatge: El resultat de la suma és: “valor”,
+     el resultat de la resta és: “valor”, el resultat de la multiplicació és: “valor” i el resultat de la divisió és: “valor”.</p>
+<body>
+    <div>
+
+    <p id="Rsuma"></p>
+    <p id="Rresta"></p>
+    <p id="Rmultiplicació"></p>
+    <p id="Rdivisió"></p>
+
+</div>
+
+    <style>
+        div{font-size: xx-large;}
+    </style>
+
+    <script>
+    var N1 =parseInt(prompt("Escriu un número"));
+    var N2 =parseInt(prompt("Escriu un altre número"));
+    x1= "El resultat de la suma és ";
+    x2= "El resultat de la resta és ";
+    x3= "El resultat de la multiplació és ";
+    x4= "El resultat de la divisió és ";
+
+
+    document.getElementById("Rsuma").innerHTML= x1 + (N1 + N2);
+    document.getElementById("Rresta").innerHTML= x2 + " " + (N1 - N2);
+    document.getElementById("Rmultiplicació").innerHTML= x3 + " " + (N1 * N2);
+    document.getElementById("Rdivisió").innerHTML= x4 + " " + (N1 / N2);
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

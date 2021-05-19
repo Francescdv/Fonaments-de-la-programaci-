@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+2.	Fes un programa amb 4 funcions que han de fer el següent (el programa ha de cridar a les 4 funcions):
+a.	Funció sense paràmetres que imprimeixi per consola “soc una funció”
+b.	Funció que rebi un array de 5 nombres com a paràmetre, retorni l’índex del nombre més gran i imprimeixi nombre en si. El programa principal també haurà d’imprimir el nombre del array mitjançant el return de la funció.
+c.	Funció que rebi un array de 5 noms com a paràmetre i retoni l’índex del nom més llarg (el programa “principal” haurà d’imprimir per consola el nom)
+d.	Funció que rebi dos nombres i retorni un array amb tots els nombres compresos entre ells. El programa principal ha de mostrar aquest array per consola.
+
+</head>
+<body>
+    
+    <script>
+
+        Hola();
+
+        let numG = nombreGran(1,7,1,8,5)
+        console.log(numG)
+
+        let respNom = NomMesLlarg("Fran","Miquel", "Robertus", "Paula", "Aida");
+        console.log(respNom);
+
+        NombresMig()
+
+
+        
+
+
+        function Hola(){
+            console.log("soc una funció")
+
+        }
+
+
+        function nombreGran(num1, num2, num3, num4, num5){
+            
+            let arrayNum = [num1, num2, num3, num4, num5];
+            let numMesGran = 0;
+
+            for (i = 0; 4 > i; i++){
+                if(arrayNum[i] > numMesGran){
+
+                    numMesGran = arrayNum[i]
+
+                }
+
+            }return numMesGran
+
+
+
+        }
+
+        function NomMesLlarg(nom1, nom2, nom3, nom4, nom5){
+            let arrayNom = [nom1, nom2, nom3, nom4, nom5];
+
+            let allargada;
+            let nomLlarg = "";
+
+            for(i = 0; arrayNom.length > i; i++){
+            
+            allargada = arrayNom[i];
+            
+            if(allargada.length > nomLlarg.length){
+            
+                nomLlarg = arrayNom[i]
+            }
+
+            }return nomLlarg
+
+
+        }
+
+        function NombresMig(){
+            let num1 = Number (prompt("Introdueix el primer nombre"));
+            let num2 = Number (prompt("Introdueix el segon nombre"));
+
+            for(i = num1; i <= num2; i++){
+                console.log(i)
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
